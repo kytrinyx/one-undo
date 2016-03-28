@@ -62,7 +62,8 @@ She's dead, of course!
   end
 
   def test_chain
-    skip "I totally just putsed the hell out of this"
-    puts Song.new.send(:chain)
+    skip "Still putsing."
+    song = Song.new
+    puts song.send(:chain, 7)
   end
 end
