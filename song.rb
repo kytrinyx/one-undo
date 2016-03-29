@@ -30,42 +30,14 @@ class Song
 
   def verse(i)
     case i
-    when 1
+    when 1, 8
       "I know an old lady who swallowed a %s.\n" % critters.last(i).first.name +
       "%s\n"                                     % critters.last(i).first.aside
-    when 2
+    when 2..7
       "I know an old lady who swallowed a %s.\n" % critters.last(i).first.name +
       "%s\n"                                     % critters.last(i).first.aside +
-      "%s\n"                                     % chain(2) +
+      "%s\n"                                     % chain(i) +
       "%s\n"                                     % "I don't know why she swallowed the fly. Perhaps she'll die."
-    when 3
-      "I know an old lady who swallowed a %s.\n" % critters.last(i).first.name +
-      "%s\n"                                     % critters.last(i).first.aside +
-      "%s\n"                                     % chain(3) +
-      "%s\n"                                     % "I don't know why she swallowed the fly. Perhaps she'll die."
-    when 4
-      "I know an old lady who swallowed a %s.\n" % critters.last(i).first.name +
-      "%s\n"                                     % critters.last(i).first.aside +
-      "%s\n"                                     % chain(4) +
-      "%s\n"                                     % "I don't know why she swallowed the fly. Perhaps she'll die."
-    when 5
-      "I know an old lady who swallowed a %s.\n" % critters.last(i).first.name +
-      "%s\n"                                     % critters.last(i).first.aside +
-      "%s\n"                                     % chain(5) +
-      "%s\n"                                     % "I don't know why she swallowed the fly. Perhaps she'll die."
-    when 6
-      "I know an old lady who swallowed a %s.\n" % critters.last(i).first.name +
-      "%s\n"                                     % critters.last(i).first.aside +
-      "%s\n"                                     % chain(6) +
-      "%s\n"                                     % "I don't know why she swallowed the fly. Perhaps she'll die."
-    when 7
-      "I know an old lady who swallowed a %s.\n" % critters.last(i).first.name +
-      "%s\n"                                     % critters.last(i).first.aside +
-      "%s\n"                                     % chain(7) +
-      "%s\n"                                     % "I don't know why she swallowed the fly. Perhaps she'll die."
-    when 8
-      "I know an old lady who swallowed a %s.\n" % critters.last(i).first.name +
-      "%s\n"                                     % critters.last(i).first.aside
     end
   end
 
