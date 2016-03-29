@@ -60,10 +60,4 @@ She's dead, of course!
     SONG
     assert_equal expected, Song.new.lyrics
   end
-
-  def test_chain
-    skip "Still putsing."
-    song = Song.new
-    puts song.send(:chain, 7)
-  end
 end
