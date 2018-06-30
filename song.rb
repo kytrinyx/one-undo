@@ -23,7 +23,7 @@ class Song
   end
 
   def lyrics
-    (1..8).map {|i| verse(i)}.join("\n")
+    (1..critters.size).map {|i| verse(i)}.join("\n")
   end
 
   private
@@ -41,7 +41,7 @@ class Song
 
   def recap(i)
     case i
-    when 1, 8
+    when 1, critters.size
       ""
     else
       "%s\n" % [
