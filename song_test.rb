@@ -60,4 +60,34 @@ She's dead, of course!
     SONG
     assert_equal expected, Song.new.lyrics
   end
+
+  def test_alternate_critters
+    skip "must fix a/an in first line"
+    expected = <<-SONG
+I know an old lady who swallowed an A.
+IDK why A.
+
+I know an old lady who swallowed a B.
+Squee, B!
+She swallowed the B to catch the A.
+IDK why A.
+
+I know an old lady who swallowed a C.
+ZOMG C!
+She swallowed the C to catch the B that blah blah.
+She swallowed the B to catch the A.
+IDK why A.
+
+I know an old lady who swallowed a D.
+Nope.
+    SONG
+
+    data = [
+      ["D", nil, "Nope."],
+      ["C", nil, "ZOMG C!"],
+      ["B", "that blah blah", "Squee, B!"],
+      ["A", nil, "IDK why A."],
+    ]
+    assert_equal expected, Song.new(data).lyrics
+  end
 end
