@@ -37,7 +37,7 @@ class Song
       "I know an old lady who swallowed a %s.\n" % critters.last(i).first.name +
       "%s\n"                                     % critters.last(i).first.aside +
       "%s\n"                                     % chain(i) +
-      "%s\n"                                     % "I don't know why she swallowed the fly. Perhaps she'll die."
+      "%s\n"                                     % critters.last.aside
     end
   end
 
