@@ -18,8 +18,8 @@ class Song
   ]
 
   attr_reader :critters
-  def initialize
-    @critters = DATA.map {|row| Critter.new(*row)}
+  def initialize(data = DATA)
+    @critters = data.map {|row| Critter.new(*row)}
   end
 
   def lyrics
