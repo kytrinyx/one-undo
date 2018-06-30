@@ -29,9 +29,14 @@ class Song
   private
 
   def verse(i)
-    "I know an old lady who swallowed a %s.\n" % critters.last(i).first.name +
-    "%s\n"                                     % critters.last(i).first.aside +
-    recap(i)
+    incident(critters.last(i).first) + recap(i)
+  end
+
+  def incident(critter)
+    "I know an old lady who swallowed a %s.\n%s\n" % [
+      critter.name,
+      critter.aside,
+    ]
   end
 
   def recap(i)
