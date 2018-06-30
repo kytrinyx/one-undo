@@ -1,4 +1,11 @@
 class Critter < Struct.new(:name, :qualifier, :aside)
+  def article
+    if name[0] =~ /[aeiouAEIOU]/
+      "an"
+    else
+      "a"
+    end
+  end
 end
 
 class Song
@@ -33,7 +40,8 @@ class Song
   end
 
   def incident(critter)
-    "I know an old lady who swallowed a %s.\n%s\n" % [
+    "I know an old lady who swallowed %s %s.\n%s\n" % [
+      critter.article,
       critter.name,
       critter.aside,
     ]

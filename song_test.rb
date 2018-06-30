@@ -62,7 +62,6 @@ She's dead, of course!
   end
 
   def test_alternate_critters
-    skip "must fix a/an in first line"
     expected = <<-SONG
 I know an old lady who swallowed an A.
 IDK why A.
